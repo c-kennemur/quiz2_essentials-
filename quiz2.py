@@ -8,13 +8,15 @@ Created on Wed Sep 15 14:33:53 2021
 import numpy as np
 from pylab import *
 
-call = input('The number of terms of the Fibonacci Sequence: ')
+#call = input('The number of terms of the Fibonacci Sequence: ')
+#No = int(call)
+
 
 # Creating our function for the Fibonacci Sequence
 def fib(N): 
     a = 0
     b = 1
-    
+
     if N == 1 : 
         seq = np.array([a, b])
         
@@ -29,12 +31,18 @@ def fib(N):
             seq = np.append(seq, c)
             a = b 
             b = c
-            
-    
+               
     print(seq)
+    print(len(seq))
+    #Now to Approximate the Golden Ratio Rn = Fn / Fn-1
+    #becuase of my if and elif statments, the c value is called with i + 1
+    R = [(seq[i+1]/seq[i]) for i in range(1, len(seq) - 1)]
+    print(R)
 
-No = int(call)
-fib(No)
+fib(5)
     
-#Now to Approximate the Golden Ratio Rn = Fn / Fn-1
+    
+   
 
+
+    
