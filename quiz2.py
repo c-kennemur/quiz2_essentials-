@@ -8,6 +8,8 @@ Created on Wed Sep 15 14:33:53 2021
 import numpy as np
 from pylab import *
 
+call = input('The number of terms of the Fibonacci Sequence: ')
+
 # Creating our function for the Fibonacci Sequence
 def fib(N): 
     a = 0
@@ -28,8 +30,11 @@ def fib(N):
             a = b 
             b = c
             
-
+    
     print(seq)
-        
-fib(25)
+
+No = int(call)
+fib(No)
+    
+#Now to Approximate the Golden Ratio Rn = Fn / Fn-1
 
