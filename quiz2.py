@@ -25,6 +25,7 @@ def fib(N):
         
     else: 
         seq = np.array([a, b])
+        
         # to create the sequence, I will create a for loop that repeats N times 
         for i in range(1, N):
             c = a + b 
@@ -33,13 +34,19 @@ def fib(N):
             b = c
                
     print(seq)
-    print(len(seq))
+    #print(len(seq))
+    
     #Now to Approximate the Golden Ratio Rn = Fn / Fn-1
     #becuase of my if and elif statments, the c value is called with i + 1
     R = [(seq[i+1]/seq[i]) for i in range(1, len(seq) - 1)]
+    plot(R)
+    xlabel('Number of Terms (N)')
+    ylabel("Golden Ratio")
     print(R)
+    
+#Using the plot and printed values of the array, it converges when N = 13 to the value of 1.6180
 
-fib(5)
+fib(13)
     
     
    
