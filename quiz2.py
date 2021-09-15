@@ -5,7 +5,6 @@ Created on Wed Sep 15 14:33:53 2021
 @author: c_ken
 """
 
-
 import numpy as np
 from pylab import *
 
@@ -14,25 +13,23 @@ def fib(N):
     a = 0
     b = 1
     
-    if N == 1: 
+    if N == 1 : 
+        seq = np.array([a, b])
+        
+    elif N == 0 : 
         seq = np.array([a])
-        print(seq)
+        
     else: 
         seq = np.array([a, b])
         # to create the sequence, I will create a for loop that repeats N times 
         for i in range(1, N):
             c = a + b 
-            new = np.array([c])
+            seq = np.append(seq, c)
             a = b 
             b = c
-            additions = np.append(new, [c])
             
 
-    final = np.append(seq, additions)       
-    print(final)
+    print(seq)
         
+fib(25)
 
-        
-fib(6)
-
-# to create the sequence, I will create a for loop that repeats N times 
